@@ -18,8 +18,6 @@ import {
 } from '@aws-amplify/ui-react'
 import { BsTwitter, BsJournal, BsYoutube } from 'react-icons/bs'
 
-import styles from '../styles/Home.module.css'
-
 export default function Home() {
 	const { tokens } = useTheme()
 
@@ -30,8 +28,8 @@ export default function Home() {
 		console.log(e.target.message.value)
 	}
 	return (
-		<View className={styles.container}>
-			<main>
+		<main>
+			<Flex justifyContent="center" alignItems="center" height="100vh">
 				<Card
 					padding={{ large: tokens.space.xxxl }}
 					variation="elevated"
@@ -154,7 +152,7 @@ export default function Home() {
 						</View>
 					</Flex>
 				</Card>
-			</main>
-		</View>
+			</Flex>
+		</main>
 	)
 }
